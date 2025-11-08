@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" class="{{ if .IsHome }}homePage{{ end }} {{ if eq .Section "ear-worms" }}ear-worms{{ end }}">
+<head>{{ partial "head.html" . }}</head>
+<body id="{{ if eq .Section "ear-worms" }}page_ear-worms{{ end }}" >
+      {{ partial "header.html" . }}
+      
+      
+      {{ block "main" . }}
+      {{ end }}
+      
+            
+      {{ partial "footer.html" . }}
+      {{ partial "scripts.html" . }}
+    
+</body>
+</html>

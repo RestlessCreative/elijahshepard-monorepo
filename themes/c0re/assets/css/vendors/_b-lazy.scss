@@ -1,0 +1,20 @@
+img.b-lazy {
+  min-height:1px;  // for quirky safari problem
+  //-webkit-transition: opacity 500ms ease-in-out;
+  //         -moz-transition: opacity 500ms ease-in-out;
+  //           -o-transition: opacity 500ms ease-in-out;
+  //              transition: opacity 500ms ease-in-out;
+  //               max-width: 100%;
+  //                 opacity: 0;
+  //@include transform(scale(0.25));
+  //@include translate(0, 20px);
+  //@include transition(all 0.5s ease);
+}
+img.b-lazy.b-loaded {
+  //opacity: 1;
+  
+  //@include opacity(1);
+  //@include translate(0, 0);
+  //@include transform(scale(1));
+  //@include transition(all 1s easeInOut);
+}

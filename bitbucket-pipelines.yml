@@ -1,0 +1,6 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - echo "everything is cool"

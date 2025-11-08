@@ -1,0 +1,113 @@
+/*************** F O O T E R ****************/
+
+.c0re__footer {
+  background:transparent;
+  display:table-row;
+  text-align:center;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  
+
+  
+}
+footer {
+  padding:100px 0;
+  width:100%;
+}
+footer.page-footer {
+  background:transparent;
+  
+  .footer-copyright {
+	  font-size:80%;
+	  padding:5px;
+	  color: $c2;
+	  background:none;
+	}
+	.legal {
+	  display:inline-block;
+		
+	  .copyright {
+  		border-right: 1px solid $c5;
+  		padding-right:1em;
+	  }
+	  
+	  li {
+  		display:inline-block;
+  		padding-left:10px;
+  		color:$c2;
+	  }
+	  
+	  a {
+  		color:$c2;
+	  }
+	}
+  
+  
+  .footer-nav {
+  
+	  li {
+  		display:inline-block;
+  		clear:none;
+  		padding:5px;
+		
+		@media (max-width: 700px) {
+		  display: block;
+		  clear: both;
+		}
+	  }
+	  .footer-nav-left {
+  		padding-right:10px;
+  		text-align:right;
+	  }
+	  .footer-nav-right {
+  		padding-left:10px;
+  		text-align: left;
+	  }
+	  
+  }
+	
+	
+  #footer-logo {
+	  text-align:center;
+	  
+	  .brand-logo {
+  		width:100%;
+  		display:block;
+  		margin:0 auto;
+	  }
+  }
+}
+#footer {
+  //height:90px;
+  //background:rgba($c1, 0);
+  //@include transition(background 0.5s);
+  
+  //&.masked {
+  //  background:rgba($c1, 0.9);
+  //  @include transition(background 0.5s);
+  //}
+}
+#footer-wrap {
+  //@include texture(125deg, #b4dcea, lighten(#b4dcea, 5%), 24, 0);
+  
+  form {
+  	margin: 2em 10% 100px 10%;
+	
+  	@media (max-width: 900px) {
+  	  margin: 2em 2% 100px 2%;  
+  	}
+	
+  }
+  
+  h2 {
+  	color:$c10;
+  	text-transform:none;
+  	text-shadow:none;
+  	margin-bottom:20px;
+  }
+  
+  
+}
+

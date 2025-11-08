@@ -1,0 +1,12 @@
+<div>
+  <!-- <script src="{{ .Site.BaseURL }}splayer/splayer.min.js"></script>    
+  <link href="{{ .Site.BaseURL }}splayer/splayer.ui.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- <script src="{{ .Site.BaseURL }}assets/js/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  {{ "<!-- [if lte IE 8 ]]> <script src=" | safeHTML }}"{{ .Site.BaseURL }}{{ "js/ie/respond.min.js\"></script><![endif] -->" | safeHTML }}
+  <!-- <script src="{{ .Site.BaseURL }}splayer/splayer.ui.min.js"></script> -->
+  <script src="{{ .Site.BaseURL }}assets/js/vendors.min.js"></script>
+  <script src="{{ .Site.BaseURL }}assets/js/app.js"></script>
+  
+  {{ template "_internal/google_analytics.html" . }}
+</div>

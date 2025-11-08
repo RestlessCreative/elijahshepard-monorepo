@@ -1,0 +1,19 @@
+<div class="related-posts">
+    <p class="h3-like">Related Projects</p>
+    <ul>
+    {{ $page_link := .Permalink -}}
+    {{ $tags := .Params.clients -}}
+    {{ range $page := .Site.Pages -}}
+        {{ $has_common_clients := intersect $tags .Params.clients | len | lt 0 -}}
+        {{ if and $has_common_clients (ne $page_link $page.Permalink) (lt ($.Scratch.Get "$c") 4) -}}
+            {{ $.Scratch.Add "$c" 1 -}}
+            <li>
+                <a href="{{ $page.Permalink }}">
+                    <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}"/>
+                    <p>{{ .Title }}</p>
+                </a>
+            </li>
+        {{- end }}
+    {{- end }}
+    </ul>
+</div>

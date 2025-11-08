@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="c0re__view" id="the-blahg">
+  <div class="c0re__content grid-1">
+    
+    <div class="c0re__list col-12">
+      <div class="c0re__inner">
+        <div class="c0re__list-wrapper">          
+              <ul>
+              
+              {{ range .Data.Pages }}
+                  <li class="blahg-item c0re__list-item">
+                      <a href="{{.Permalink}}">
+                        {{ if .Params.svg_title }} <img src="{{.Params.svg_title}}"> {{ else }}<div class="itemTitle">{{.Title}}</div>{{ end }}                        
+                      </a>
+                  </li>
+              {{ end }}
+              
+              </ul>              
+        </div>
+      </div>
+    </div>
+    <div class="c0re__inner-content col">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ end }}

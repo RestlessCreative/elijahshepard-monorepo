@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="c0re__view list-view" id="black-hole">
+  <div class="c0re__traverse"><a href="{{ .Site.BaseURL }}" class="traverse-back"><i class="material-icons">chevron_left</i></a></div>
+  <div class="c0re__content grid-noGutter">
+          <div id="active-background"></div>
+          <div id="active-content" class="c0re__inner-content col-7_xs-12_sm-12_md-12">
+            <div class="c0re__inner grid-center-middle-noGutter">
+                <div class="col-12">
+                  <div id="loadWrapper"></div>                  
+                </div>
+            </div>
+          </div>          
+          
+          {{ partial "black-hole-navigator.html" . }}
+      
+    {{ partial "data-container.html" . }}
+    
+  </div>
+</div>
+{{ end }}

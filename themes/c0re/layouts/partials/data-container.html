@@ -1,0 +1,320 @@
+{{ with .Site.GetPage "section" "black-hole" }}
+<div id="data-container">
+  <div id="incoming"></div>
+  <div id="incoming-bg"></div>
+  <div id="landing-web">
+    <div class="active-background {{ if .Params.web_background }}hasBg{{ end }}"><div class="background-container {{ if .Params.web_background }}b-lazy" data-src="{{ .Params.web_background }}"{{ else }}"{{ end }}></div></div>
+    <div class="landing-content content-web grid-middle-center-noGutter" data-project="" data-switch="">
+        
+        <div class="main-content col-12">                  
+            <div class="hero-container">
+              <div class="hero-content">
+                {{ if .Params.web_gallery }}                                
+                  {{ range first 1 .Params.web_gallery }}
+                      <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="hero-gallery-wrap">
+                  {{ end }}
+                {{ end }}
+                    {{ if .Params.hero_video_web }}
+                      <div class="video-container">
+                          <div class="vid-overlay" style="background: url({{ .Params.hero_image_web }}) no-repeat center;background-size:cover;"></div>
+                          <video 
+                                 muted
+                                 poster="{{ .Params.hero_image_web }}"
+                                 width="320" height="240"
+                                 id="active-vid-web"
+                          >
+                            <source src="{{ .Params.hero_video_web }}" type="video/mp4">
+                          </video>                          
+                      </div>
+                    {{ else }}
+                      {{ if .Params.hero_image_web }}<img src="{{ .Params.hero_image_web }}" class="responsive-img">{{ end }}
+                    {{ end }}
+                {{ if .Params.web_gallery }}{{ range first 1 .Params.web_gallery }}
+                      </a>                                
+                {{ end }}{{ end }}
+                
+              </div>
+            </div>
+            
+        </div>
+        
+        <div class="content-leader">
+          
+            <div class="grid">
+              <div class="metaLeft col-12">
+                <div class="page-heading">
+                  <div class="metaLeaderTop"></div>
+                  <h1>{{ .Params.web_title }}</h1>
+                  <div class="metaLeaderBottom"></div>
+                </div>
+                <div class="meta-wrapper">
+                    <div class="description">{{ .Params.web_description }}</div>
+                    <div class="pageMeta grid-2_xs-1-noGutter"></div>
+                    <div class="supplemental">              
+                        {{ if .Params.web_gallery }}
+                          <div class="gallery-content">                        
+                            <div class="launchGallery">
+                              {{if gt .Params.web_gallery 1 }}{{ range first 1 (after 1 .Params.web_gallery) }}     
+                                <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}">
+                                  <svg class="eye" viewBox="0 0 100 56"><path d="M50,0C17.2,0,0,24.17,0,28S17.2,56,50,56s50-24.17,50-28S82.8,0,50,0Zm0,49.54C37.73,49.54,27.78,39.9,27.78,28S37.73,6.46,50,6.46,72.22,16.1,72.22,28,62.27,49.54,50,49.54ZM50,28c-2-2.23,3.32-10.77,0-10.77A10.94,10.94,0,0,0,38.89,28a11.12,11.12,0,0,0,22.22,0C61.11,25.27,51.73,29.9,50,28Z"/></svg>
+                                </a>
+                              {{ end }}{{ end }}
+                              {{if gt .Params.web_gallery 2 }}{{ range after 2 .Params.web_gallery }}                                              
+                                 <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="gallery-thumb"></a>                              
+                              {{ end }}{{ end }}
+                            </div>                          
+                          </div>                
+                        {{ end }}
+                    </div>
+                </div>
+              </div>
+              <div class="metaRight col">
+                
+              </div>
+            </div>
+            
+        </div>
+        
+    </div>
+  </div>
+  
+  
+  <div id="landing-film-tv">
+    <div class="active-background {{ if .Params.film_tv_background }}hasBg{{ end }}"><div class="background-container {{ if .Params.film_tv_background }}b-lazy" data-src="{{ .Params.film_tv_background }}"{{ else }}"{{ end }}></div></div>
+    <div class="landing-content content-film-tv grid-middle-center-noGutter" data-project="" data-switch="">
+        
+        <div class="main-content col-12">                  
+            <div class="hero-container">
+              <div class="hero-content">
+                {{ if .Params.film_tv_gallery }}                                
+                  {{ range first 1 .Params.film_tv_gallery }}
+                      <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="hero-gallery-wrap">
+                  {{ end }}
+                {{ end }}
+                    {{ if .Params.hero_video_film_tv }}
+                      <div class="video-container">
+                          <div class="vid-overlay" style="background: url({{ .Params.hero_image_film_tv }}) no-repeat center;background-size:cover;"></div>
+                          <video 
+                                 muted
+                                 poster="{{ .Params.hero_image_film_tv }}"
+                                 width="320" height="240"
+                                 id="active-vid-film-tv"
+                          >
+                            <source src="{{ .Params.hero_video_film_tv }}" type="video/mp4">
+                          </video>                          
+                      </div>
+                    {{ else }}
+                      {{ if .Params.hero_image_film_tv }}<img src="{{ .Params.hero_image_film_tv }}" class="responsive-img">{{ end }}
+                    {{ end }}
+                {{ if .Params.film_tv_gallery }}{{ range first 1 .Params.film_tv_gallery }}
+                      </a>                                
+                {{ end }}{{ end }}
+                
+              </div>
+            </div>
+            
+        </div>
+        
+        <div class="content-leader">
+          
+            <div class="grid">
+              <div class="metaLeft col-12">
+                <div class="page-heading">
+                  <div class="metaLeaderTop"></div>
+                  <h1>{{ .Params.film_tv_title }}</h1>
+                  <div class="metaLeaderBottom"></div>
+                </div>
+                <div class="meta-wrapper">
+                    <div class="description">{{ .Params.film_tv_description }}</div>
+                    <div class="pageMeta grid-2_xs-1-noGutter"></div>
+                    <div class="supplemental">              
+                        {{ if .Params.film_tv_gallery }}
+                          <div class="gallery-content">
+                        
+                            <div class="launchGallery">
+                              {{if gt .Params.film_tv_gallery 1 }}{{ range first 1 (after 1 .Params.film_tv_gallery) }}     
+                                <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}">
+                                  <svg class="eye" viewBox="0 0 100 56"><path d="M50,0C17.2,0,0,24.17,0,28S17.2,56,50,56s50-24.17,50-28S82.8,0,50,0Zm0,49.54C37.73,49.54,27.78,39.9,27.78,28S37.73,6.46,50,6.46,72.22,16.1,72.22,28,62.27,49.54,50,49.54ZM50,28c-2-2.23,3.32-10.77,0-10.77A10.94,10.94,0,0,0,38.89,28a11.12,11.12,0,0,0,22.22,0C61.11,25.27,51.73,29.9,50,28Z"/></svg>
+                                </a>
+                              {{ end }}{{ end }}
+                              {{if gt .Params.film_tv_gallery 2 }}{{ range after 2 .Params.film_tv_gallery }}                                              
+                                 <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="gallery-thumb"></a>                              
+                              {{ end }}{{ end }}
+                            </div>
+                          
+                          </div>                
+                        {{ end }}
+                    </div>
+                </div>
+              </div>
+              <div class="metaRight col">
+                
+              </div>
+            </div>
+            
+        </div>
+        
+    </div>
+  </div>
+   
+  
+  <div id="landing-games">
+    <div class="active-background {{ if .Params.games_background }}hasBg{{ end }}"><div class="background-container {{ if .Params.games_background }}b-lazy" data-src="{{ .Params.games_background }}"{{ else }}"{{ end }}></div></div>
+    <div class="landing-content content-games grid-middle-center-noGutter" data-project="" data-switch="">
+        
+        <div class="main-content col-12">                  
+            <div class="hero-container">
+              <div class="hero-content">
+                {{ if .Params.games_gallery }}                                
+                  {{ range first 1 .Params.games_gallery }}
+                      <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="hero-gallery-wrap">
+                  {{ end }}
+                {{ end }}
+                    {{ if .Params.hero_video_games }}
+                      <div class="video-container">
+                          <div class="vid-overlay" style="background: url({{ .Params.hero_image_games }}) no-repeat center;background-size:cover;"></div>
+                          <video 
+                                 muted
+                                 poster="{{ .Params.hero_image_games }}"
+                                 width="320" height="240"
+                                 id="active-vid-games"
+                          >
+                            <source src="{{ .Params.hero_video_games }}" type="video/mp4">
+                          </video>                          
+                      </div>
+                    {{ else }}
+                      {{ if .Params.hero_image_games }}<img src="{{ .Params.hero_image_games }}" class="responsive-img">{{ end }}
+                    {{ end }}
+                {{ if .Params.games_gallery }}{{ range first 1 .Params.games_gallery }}
+                      </a>                                
+                {{ end }}{{ end }}
+                
+              </div>
+            </div>
+            
+        </div>
+        
+        <div class="content-leader">
+          
+            <div class="grid">
+              <div class="metaLeft col-12">
+                <div class="page-heading">
+                  <div class="metaLeaderTop"></div>
+                  <h1>{{ .Params.games_title }}</h1>
+                  <div class="metaLeaderBottom"></div>
+                </div>
+                <div class="meta-wrapper">
+                    <div class="description">{{ .Params.games_description }}</div>
+                    <div class="pageMeta grid-2_xs-1-noGutter"></div>
+                    <div class="supplemental">
+                      
+                        {{ if .Params.games_gallery }}
+                          <div class="gallery-content">
+                        
+                            <div class="launchGallery">
+                              {{if gt .Params.games_gallery 1 }}{{ range first 1 (after 1 .Params.games_gallery) }}     
+                                <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}">
+                                  <svg class="eye" viewBox="0 0 100 56"><path d="M50,0C17.2,0,0,24.17,0,28S17.2,56,50,56s50-24.17,50-28S82.8,0,50,0Zm0,49.54C37.73,49.54,27.78,39.9,27.78,28S37.73,6.46,50,6.46,72.22,16.1,72.22,28,62.27,49.54,50,49.54ZM50,28c-2-2.23,3.32-10.77,0-10.77A10.94,10.94,0,0,0,38.89,28a11.12,11.12,0,0,0,22.22,0C61.11,25.27,51.73,29.9,50,28Z"/></svg>
+                                </a>
+                              {{ end }}{{ end }}
+                              {{if gt .Params.games_gallery 2 }}{{ range after 2 .Params.games_gallery }}                                              
+                                 <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="gallery-thumb"></a>                              
+                              {{ end }}{{ end }}
+                            </div>
+                          
+                          </div>                
+                        {{ end }}
+                    </div>
+                </div>
+              </div>
+              <div class="metaRight col">
+                
+              </div>
+            </div>
+            
+        </div>
+        
+    </div>
+  </div>  
+  
+  <div id="landing-other">
+    <div class="active-background {{ if .Params.other_background }}hasBg{{ end }}"><div class="background-container {{ if .Params.other_background }}b-lazy" data-src="{{ .Params.other_background }}"{{ else }}"{{ end }}></div></div>
+    <div class="landing-content content-other grid-middle-center-noGutter" data-project="" data-switch="">
+        
+        <div class="main-content col-12">                  
+            <div class="hero-container">
+              <div class="hero-content">
+                {{ if .Params.other_gallery }}                                
+                  {{ range first 1 .Params.other_gallery }}
+                      <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="hero-gallery-wrap">
+                  {{ end }}
+                {{ end }}
+                    {{ if .Params.hero_video_other }}
+                      <div class="video-container">
+                          <div class="vid-overlay" style="background: url({{ .Params.hero_image_other }}) no-repeat center;background-size:cover;"></div>
+                          <video 
+                                 muted
+                                 poster="{{ .Params.hero_image_other }}"
+                                 width="320" height="240"
+                                 id="active-vid-other"
+                          >
+                            <source src="{{ .Params.hero_video_other }}" type="video/mp4">
+                          </video>                          
+                      </div>
+                    {{ else }}
+                      {{ if .Params.hero_image_other }}<img src="{{ .Params.hero_image_other }}" class="responsive-img">{{ end }}
+                    {{ end }}
+                {{ if .Params.other_gallery }}{{ range first 1 .Params.other_gallery }}
+                      </a>                                
+                {{ end }}{{ end }}
+                
+              </div>
+            </div>
+            
+        </div>
+        
+        <div class="content-leader">
+          
+            <div class="grid">
+              <div class="metaLeft col-12">
+                <div class="page-heading">
+                  <div class="metaLeaderTop"></div>
+                  <h1>{{ .Params.other_title }}</h1>
+                  <div class="metaLeaderBottom"></div>
+                </div>
+                <div class="meta-wrapper">
+                    <div class="description">{{ .Params.other_description }}</div>
+                    <div class="pageMeta grid-2_xs-1-noGutter"></div>
+                    <div class="supplemental">
+              
+                        {{ if .Params.other_gallery }}
+                          <div class="gallery-content">
+                        
+                            <div class="launchGallery">
+                              {{if gt .Params.other_gallery 1 }}{{ range first 1 (after 1 .Params.other_gallery) }}     
+                                <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}">
+                                  <svg class="eye" viewBox="0 0 100 56"><path d="M50,0C17.2,0,0,24.17,0,28S17.2,56,50,56s50-24.17,50-28S82.8,0,50,0Zm0,49.54C37.73,49.54,27.78,39.9,27.78,28S37.73,6.46,50,6.46,72.22,16.1,72.22,28,62.27,49.54,50,49.54ZM50,28c-2-2.23,3.32-10.77,0-10.77A10.94,10.94,0,0,0,38.89,28a11.12,11.12,0,0,0,22.22,0C61.11,25.27,51.73,29.9,50,28Z"/></svg>
+                                </a>
+                              {{ end }}{{ end }}
+                              {{if gt .Params.other_gallery 2 }}{{ range after 2 .Params.other_gallery }}                                              
+                                 <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="gallery-thumb"></a>                              
+                              {{ end }}{{ end }}
+                            </div>
+                          
+                          </div>                
+                        {{ end }}
+                    </div>
+                </div>
+              </div>
+              <div class="metaRight col">
+                
+              </div>
+            </div>
+            
+        </div>
+        
+    </div>
+  </div>
+   
+</div>
+{{ end }}

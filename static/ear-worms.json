@@ -1,0 +1,72 @@
+[
+  "__splayer__",
+  {
+    "__splayer__": true,
+    "__finishedTasks__": 2,
+    "__totalTasks__": 2,
+    "type": "track",
+    "src": "https://es-main.s3.us-west-1.amazonaws.com/ear-worms/tracks/drinking-in-christmas.mp3",
+    "format": "mp3",
+    "input": "url",
+    "playable": true,
+    "date": "2017-07-20T03:24:49.935Z",
+    "stats": {
+      "load": { "count": 0, "parent": null, "lastModifiedDate": null },
+      "ended": { "count": 0, "lastModifiedDate": null }
+    },
+    "id": 3958774426,
+    "name": "Adele-SetFiretotheRain.mp3",
+    "__titleName__": true,
+    "title": "Set Fire to the Rain",
+    "__extradata__": true,
+    "__metadata__": true,
+    "__pullingOrder__": ["embedded", "internet"],    
+    "wiki": {
+      "content": "\"Set Fire to the Rain\" is a song performed by English singer-songwriter Adele, released as the third single from her studio album, 21 (2011). The song was composed by Adele and Fraser T Smith. The song has peaked at number one on Billboard Hot 100 in United States.\n <a href=\"http://www.last.fm/music/Adele/_/Set+Fire+to+the+Rain\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
+      "summary": "\"Set Fire to the Rain\" is a song performed by English singer-songwriter Adele, released as the third single from her studio album, 21 (2011). The song was composed by Adele and Fraser T Smith. The song has peaked at number one on Billboard Hot 100 in United States.\n <a href=\"http://www.last.fm/music/Adele/_/Set+Fire+to+the+Rain\">Read more on Last.fm</a>."
+    },
+    "ready": true,
+    "albums": [
+      {
+        "__splayer__": true,
+        "__simplified__": true,
+        "type": "album",
+        "id": 1227072750
+      }
+    ],
+    "artists": [
+      {
+        "__splayer__": true,
+        "__simplified__": true,
+        "type": "artist",
+        "id": 182160020
+      }
+    ],
+    "genres": [
+      {
+        "__splayer__": true,
+        "__simplified__": true,
+        "type": "genre",
+        "id": 2795144694
+      },
+      {
+        "__splayer__": true,
+        "__simplified__": true,
+        "type": "genre",
+        "id": 2543039693
+      },
+      {
+        "__splayer__": true,
+        "__simplified__": true,
+        "type": "genre",
+        "id": 3969488366
+      },
+      {
+        "__splayer__": true,
+        "__simplified__": true,
+        "type": "genre",
+        "id": 1497098816
+      }
+    ]
+  }
+]

@@ -1,0 +1,204 @@
+/* ----------------------------------------------------------------------------
+ * Frameworks
+ * ------------------------------------------------------------------------- */
+//@import "vendors/neat/neat";
+@import "vendors/materialize";  // make sure .col is changed to .column in _grid.scss IF gridlex is enabled
+@import "vendors/gridlex";  // adds flexbox grid system
+
+
+/* Foundation Framework */
+//@import "partials/settings"; // specific to Foundation. Comment this out if not using Foundation
+//@import "../../node_modules/foundation-sites/scss/foundation";
+
+	/* selectively turn on and off any Foundation components you need */
+	/*@include foundation-global-styles;
+	@include foundation-grid;
+	@include foundation-flex-grid;
+	@include foundation-flex-classes;
+	@include foundation-typography;
+	@include foundation-forms;
+	@include foundation-button;
+	@include foundation-accordion;
+	@include foundation-accordion-menu;
+	@include foundation-badge;
+	@include foundation-breadcrumbs;
+	@include foundation-button-group;
+	@include foundation-callout;
+	@include foundation-card;
+	@include foundation-close-button;
+	@include foundation-menu;
+	@include foundation-menu-icon;
+	@include foundation-drilldown-menu;
+	@include foundation-dropdown;
+	@include foundation-dropdown-menu;
+	@include foundation-responsive-embed;
+	@include foundation-label;
+	@include foundation-media-object;
+	@include foundation-off-canvas;
+	@include foundation-orbit;
+	@include foundation-pagination;
+	@include foundation-progress-bar;
+	@include foundation-slider;
+	@include foundation-sticky;
+	@include foundation-reveal;
+	@include foundation-switch;
+	@include foundation-table;
+	@include foundation-tabs;
+	@include foundation-thumbnail;
+	@include foundation-title-bar;
+	@include foundation-tooltip;
+	@include foundation-top-bar;
+	@include foundation-visibility-classes;
+	@include foundation-float-classes;*/
+
+
+/* ----------------------------------------------------------------------------
+ * Normalize & Santize
+ * ------------------------------------------------------------------------- */
+//@import "vendors/normalize";  // if you are using Foundation or Materialize, comment this out since Foundation already includes normalize 
+//@import "vendors/sanitize"; // this is an enhancement to normalize, developed by one of the authors of normalize
+
+
+
+/* ----------------------------------------------------------------------------
+ * Mixins & Variables - loaded after frameworks in order to overwrite
+ * ------------------------------------------------------------------------- */
+$output-bourbon-deprecation-warnings: false;  
+@import "vendors/bourbon/bourbon";
+@import "partials/mixins";
+//@import "partials/variables";  // already declared inside of materialize in order for order of other scss files to use them
+//@import "vendors/sassmatic";  // photo filter mixins
+
+
+
+
+/* ----------------------------------------------------------------------------
+ * Fonts 
+ * ------------------------------------------------------------------------- */
+
+/* use font-face mixin which works perfect with font squirrel.
+ * Just add fonts to fonts folder and use them like this:
+ * @include fontface('family', 'assets/fonts', 'myfontname');
+ *
+ */
+// "gineso-condensed" & "gineso" - included from typekit
+//@include fontface('nexa-light', 'assets/fonts/nexa', 'Nexa_Free_Light-webfont');
+//@include fontface('nexa-bold', 'assets/fonts/nexa', 'Nexa_Free_Bold-webfont');
+//@include fontface('roboto', '../fonts/roboto', 'Roboto-Black');
+//@include fontface('united', '../fonts/united', 'United-Sans');
+
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Thin), url('#{$roboto-font-path}Roboto-Thin.eot');
+    src: url("#{$roboto-font-path}Roboto-Thin.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Thin.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Thin.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Thin.ttf") format("truetype");
+
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Light), url('#{$roboto-font-path}Roboto-Light.eot');
+    src: url("#{$roboto-font-path}Roboto-Light.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Light.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Light.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Regular), url('#{$roboto-font-path}Roboto-Regular.eot');
+    src: url("#{$roboto-font-path}Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Regular.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Regular.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Medium), url('#{$roboto-font-path}Roboto-Medium.eot');
+    src: url("#{$roboto-font-path}Roboto-Medium.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Medium.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Medium.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Bold), url('#{$roboto-font-path}Roboto-Bold.eot');
+    src: url("#{$roboto-font-path}Roboto-Bold.eot?#iefix") format('embedded-opentype'),
+        url("#{$roboto-font-path}Roboto-Bold.woff2") format("woff2"),
+        url("#{$roboto-font-path}Roboto-Bold.woff") format("woff"),
+        url("#{$roboto-font-path}Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+//@import url('https://fonts.googleapis.com/css?family=Roboto:900');  // something up with local version of this
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Black), url('#{$roboto-font-path}Roboto-Black.ttf');
+    src: url("#{$roboto-font-path}Roboto-Black.woff2") format("woff2"),
+         url("#{$roboto-font-path}Roboto-Black.woff") format("woff"),
+		 url("../fonts/roboto/Roboto-Black.ttf") format("truetype");
+    
+	font-weight: 900;
+}
+
+
+@import '../fonts/font-awesome/css/font-awesome.css';
+
+
+
+/* ----------------------------------------------------------------------------
+ * Plugins
+ * ------------------------------------------------------------------------- */
+
+/* Swiper JS */
+@import "vendors/swiper";
+
+/* Fancybox */
+@import "vendors/fancybox";
+
+/* animation utility */
+//@import "motion-ui"; 
+
+/* NanoScroll */
+//@import "vendors/nanoscroll";
+
+/* Overlay Scrollbars */
+//@import "vendors/overlay-scrollbars";
+
+/* Hammer Slider */
+//@import "vendors/hammerslider";
+
+/* BLazy */
+@import "vendors/b-lazy";
+
+
+/* ----------------------------------------------------------------------------
+ * Structure & Layout
+ * ------------------------------------------------------------------------- */
+//@import "partials/structure";  // conflicts with materialize
+
+/* Wordpress C0re */
+//@import "partials/wpc0re";
+
+/* Base */
+@import "partials/base";
+
+/* Navigation */
+@import 'partials/elements/_header'; 
+@import 'partials/elements/_footer'; 
+@import 'partials/elements/_sideNav'; 
+
+/* Pages */
+@import "partials/pages";
+
+/* Player */
+@import 'partials/elements/_player'; 

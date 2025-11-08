@@ -1,0 +1,13 @@
+# theme.toml template for a Hugo theme
+
+name = "Restless Creative"
+license = "Creative Commons Attribution 3.0 Unported"
+description = "The living obituary of Elijah Shepard"
+homepage = ""
+tags = ["elijah shepard", "creaitve", "musician", "designer", "composer", "songwriter", "front-end developer"]
+features = ["one page"]
+min_version = 0.15
+
+[author]
+  name = "Elijah Shepard"
+  homepage = "//elijahshepard.com"

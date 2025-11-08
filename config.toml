@@ -1,0 +1,47 @@
+baseurl = "https://elijahshepard.com/"
+canonifyurls = true
+disqusShortname = "elijahshepard-com"
+googleAnalytics = ""
+languageCode = "en-us"
+min_version = 0.2
+relativeURLS = true
+theme = "c0re"
+title = "Elijah Shepard: A Restless Creative"
+[params]
+description = "The living obituary of a restless creative."
+email = "elijah@restlesscreative.com"
+mediaurl = "https://es-main.s3-us-west-1.amazonaws.com/"
+name = "Elijah Shepard"
+[[params.footer.copyright.notice]]
+text = "&copy; Elijah Shepard"
+[params.social_list]
+enable = true
+[[params.social]]
+icon = "fa-twitter"
+link = "http://twitter.com/elijahshepard"
+title = "Twitter"
+[[params.social]]
+icon = "fa-facebook"
+link = "https://facebook.com/elijahshepard"
+title = "Facebook"
+[[params.social]]
+icon = "fa-instagram"
+link = "http://instagram.com/audiocatharsis"
+title = "Instagramm"
+[[params.social]]
+icon = "fa-envelope"
+link = "mailto:elijah@restlesscreative.com"
+title = "Email"
+[taxonomies]
+agency = "agencies"
+category = "categories"
+client = "clients"
+project = "projects"
+role = "roles"
+tag = "tags"
+type = "types"
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+

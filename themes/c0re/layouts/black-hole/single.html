@@ -1,0 +1,111 @@
+{{ define "main" }}
+<div class="c0re__view single-view" id="black-hole">
+  <div class="c0re__traverse"><a href="{{ .Site.BaseURL }}black-hole" class="traverse-back"><i class="material-icons">chevron_left</i></a></div>
+  <div class="c0re__content grid-noGutter">
+          <div id="active-background"><div class="active-background {{ if .Params.background }}hasBg{{ end }}"><div class="background-container {{ if .Params.background }}" style="background:url({{ .Params.background }}) no-repeat left bottom;background-size:cover;"{{ else }}"{{ end }}></div></div></div>
+          <div id="active-content" class="c0re__inner-content col-7_xs-12_sm-12_md-12">
+            <div class="c0re__inner grid-center-middle-noGutter">
+                <div class="col-12">
+                  <div id="loadWrapper">
+                    <div class="landing-content grid-center-middle-noGutter" data-project="{{ .Params.project_id }}" data-switch="">
+                      <div class="main-content col-12">                  
+                          
+                          <div class="hero-container">
+                            <div class="hero-content">
+                              
+                              {{ if .Params.gallery }}                                
+                                {{ range first 1 .Params.gallery }}
+                                    <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="hero-gallery-wrap">
+                                {{ end }}
+                              {{ end }}
+                                      {{ if .Params.hero_video }}                                        
+                                        <div class="video-container">
+                                            <div class="vid-overlay" style="background: url({{ .Params.hero_image }}) no-repeat center;background-size:cover;"></div>
+                                            <video 
+                                                   muted
+                                                   poster="{{ .Params.hero_image }}"
+                                                   width="320" height="240"
+                                                   id="active-vid"
+                                            >
+                                              <source src="{{ .Params.hero_video }}" type="video/mp4">
+                                            </video>
+                                        </div>
+                                      {{ else if .Params.hero_vimeo }}
+                                        <div class="vimeo-container video-responsive">
+                                          <iframe src="//player.vimeo.com/video/{{ .Params.hero_vimeo }}?autoplay=1&loop=1&autopause=1" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        </div>
+                                      {{ else }}
+                                        <img src="{{ .Params.hero_image }}" class="responsive-img">
+                                      {{ end }}
+                              {{ if .Params.gallery }}{{ range first 1 .Params.gallery }}
+                                    </a>                                
+                              {{ end }}{{ end }}
+                                                         
+                            </div>                            
+                          </div>
+                          
+                              
+                              
+                            
+                        
+                      </div>
+                      <div class="content-leader">
+                        
+                          <div class="grid">
+                            <div class="metaLeft col-12">
+                              <div class="page-heading">
+                                <div class="metaLeaderTop"></div>
+                                <h1>{{ .Title }}</h1>
+                                
+                                <div class="metaLeaderBottom"></div>
+                              </div>
+                              <div class="meta-wrapper is-single grid-noGutter">                                  
+                                  <div class="description is-single">{{ .Content }}</div>
+                                  <div class="pageMeta is-single">                                    
+                                    <ul class="">                                
+                                      <li class=""><span class="metaTitle">Role:</span><span class="">{{ if .Params.roles }}{{ delimit .Params.roles ", " }}{{ end }}</span></li>
+                                      {{ if and (ne .Params.project_id "000-000-0000-0000") .Params.project_id }}<li class=""><span class="metaTitle">Project ID:</span><span class="">{{ .Params.project_id }}</span></li>{{ end }}
+                                      <li class=""><span class="metaTitle">Brand:</span><span class="">{{ if .Params.clients }}{{ delimit .Params.clients ", " }}{{ end }}</span></li>
+                                      {{ if .Params.agency }}<li class=""><span class="metaTitle">Agency:</span><span class="">{{ delimit .Params.agency ", " }}</span></li>{{ end }}
+                                      {{ if .Params.types }}<li class=""><span class="metaTitle">Type:</span><span class="">{{ delimit .Params.types ", " }}</span></li>{{ end }}
+                                    </ul>
+                                  </div>
+                                  <div class="supplemental">
+                                  {{ if .Params.gallery }}
+                                  <div class="gallery-content">
+                                
+                                    <div class="launchGallery">
+                                      {{if gt .Params.gallery 1 }}{{ range first 1 (after 1 .Params.gallery) }}     
+                                        <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}">
+                                          <svg class="eye" viewBox="0 0 100 56"><path d="M50,0C17.2,0,0,24.17,0,28S17.2,56,50,56s50-24.17,50-28S82.8,0,50,0Zm0,49.54C37.73,49.54,27.78,39.9,27.78,28S37.73,6.46,50,6.46,72.22,16.1,72.22,28,62.27,49.54,50,49.54ZM50,28c-2-2.23,3.32-10.77,0-10.77A10.94,10.94,0,0,0,38.89,28a11.12,11.12,0,0,0,22.22,0C61.11,25.27,51.73,29.9,50,28Z"/></svg>
+                                          Project Gallery
+                                        </a>
+                                      {{ end }}{{ end }}
+                                      {{if gt .Params.gallery 2 }}{{ range after 2 .Params.gallery }}                                              
+                                         <a href="{{ .image }}" data-fancybox="gallery" data-caption="{{ .caption }}" class="gallery-thumb"></a>                              
+                                      {{ end }}{{ end }}
+                                    </div>
+                                  
+                                  </div>
+                                  {{ end }}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="metaRight col">
+                              
+                            </div>
+                          </div>                          
+                      </div>
+                     
+                  </div>
+                </div>
+                
+          </div>
+        </div>
+      </div>
+      {{ partial "black-hole-navigator.html" . }}    
+      
+    {{ partial "data-container.html" . }}
+  </div>
+</div>
+{{ end }}

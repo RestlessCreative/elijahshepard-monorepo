@@ -1,0 +1,28 @@
+    </div>  {{/* .c0re__outer */}}
+    <div class="c0re__footer">
+      <!--<div class="continue"><i class="bounce material-icons">expand_more</i></div>-->
+      <div class="c0re__inner">
+        
+        <div id="footer-wrap">
+        {{ if .Site.Params.footer.enable }}
+            <section id="footer">
+                
+                <footer class="page-footer">
+                  
+                  {{ if .Site.Params.footer.social_list.enable }}
+                    <ul class="social-links">
+                      {{ range .Site.Params.footer.social }}
+                        <li><a href="{{ .link }}" class="icon alt {{ .icon }}"><span class="label">{{ .title }}</span></a></li>
+                      {{ end }}
+                    </ul>
+                  {{ end }}
+                    
+                </footer>
+                
+          </section>
+        {{ end }}
+        </div>
+        
+      </div>
+    </div>
+</div>  {{/* #c0re__interface */}} 
