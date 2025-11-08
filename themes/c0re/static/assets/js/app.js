@@ -566,12 +566,33 @@ function initC0re() {
     
   }
   
-  
+  // Make disco embed iframe responsive
+  function resizeDiscoEmbed() {
+    console.log('resizeDiscoEmbed called from app.js');
+    var iframe = document.getElementById('disco-playlist-25794135');
+    if (iframe) {
+      // Calculate available height (viewport - tabs - minimal padding)
+      var tabs = document.getElementById('category-switcher');
+      var tabsHeight = tabs ? tabs.offsetHeight : 50;
+      var availableHeight = window.innerHeight - tabsHeight - 20; // minimal padding
+      
+      iframe.style.width = '100%';
+      iframe.style.height = availableHeight + 'px';
+      iframe.style.display = 'block';
+      iframe.style.margin = '0 auto';
+    }
+  }
+
+  // Resize on load and window resize
+  if (document.getElementById('disco-playlist-25794135')) {
+    resizeDiscoEmbed();
+    window.addEventListener('resize', resizeDiscoEmbed);
+  }
   
   
   
 }
-
+/** end of autoloaded functions */
 
 
 
@@ -2776,8 +2797,12 @@ $( document ).ready(function() {
       console.log(targetRel);
       
         $('.audioSection').hide();
-        $('#'+targetRel).show();          
-      
+        $('#'+targetRel).show();
+        
+        // Resize iframe when featured tab is clicked
+        if(targetRel === 'featured' && typeof resizeDiscoEmbed === 'function') {
+          setTimeout(resizeDiscoEmbed, 100);
+        }
 
     });
 
@@ -3896,6 +3921,8 @@ if($('#eye-candy').length > 0) {
         loop: true,
         volume: 0.5,
       });
-      sound.play();       
+      sound.play();
+      
+      
   
 }
